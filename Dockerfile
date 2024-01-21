@@ -5,11 +5,11 @@ FROM node:21-alpine
 
 # copy files to container virtual file system
 # note: need end slash so linux knows to create folder if does not exist
-COPY package.json index.html vite.config.js /app/
-ADD public /app/public
+COPY index.html package.json vite.config.js vitest.config.js /app/
 ADD src /app/src
 
-# RUN echo $(ls -l /app/src)
+# RUN echo $(ls /app/)
+# RUN echo $(ls /app/src/components)
 
 # like cd
 WORKDIR /app/
@@ -18,4 +18,4 @@ WORKDIR /app/
 RUN npm install
 
 # last command in docker file, only one can exist
-CMD ["npm", "run", "dev", "--", "--host"]
+CMD ["npm", "run", "serve", "--", "--host"]

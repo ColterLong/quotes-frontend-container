@@ -1,18 +1,29 @@
 {
-  "name": "quotes-frontend-container",
+  "name": "serverless-quotes",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "serve": "vite --port 8080",
+    "test": "vitest --dom"
   },
   "dependencies": {
+    "axios": "^1.6.5",
+    "bson": "^6.2.0",
+    "happy-dom": "^13.0.2",
     "vue": "^3.3.11"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.5.2",
-    "vite": "^5.0.8"
+    "@vue/test-utils": "^2.4.3",
+    "eslint": "^8.56.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-vue": "^9.20.1",
+    "vite": "^5.0.8",
+    "vitest": "^1.1.3"
   }
 }
